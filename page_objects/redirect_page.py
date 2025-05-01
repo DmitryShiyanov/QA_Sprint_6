@@ -35,3 +35,6 @@ class RedirectPage(BasePage):
     @allure.step('Метод для текста кнопки главной')
     def check_main_page(self):
         return self.get_field_text(MainPageLocators.ORDER_BUTTON_UP)
+
+    def switch_to_window(self):
+        self.driver.switch_to.window(self.driver.window_handles[1])
